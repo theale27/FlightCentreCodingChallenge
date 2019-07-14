@@ -1,0 +1,193 @@
+$bg_color: #f5f5f5;
+$text_color: #1f1f1f;
+$white: #ffffff;
+
+$btn_bg: #0072ea;
+$btn_hover: #1540b8;
+$border: #d3d3d3;
+$border-radius: 3px;
+$box_shadow: 0px 2px 2px $border;
+
+html {
+  box-sizing: border-box;
+  font-family: "Calibri", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: $bg_color;
+  color: $text_color;
+  margin: 1rem;
+  p {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Landscape Phones and above
+@media (min-width: 576px) {
+  body {
+    margin: 4rem;
+  }
+}
+
+// Page Headings
+#tour_header {
+  margin: 5px;
+  .tour_heading {
+    font-size: 1.8rem;
+  }
+  .tours_found {
+    font-size: 0.9rem;
+  }
+}
+
+// Tour Container
+#tour_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tour {
+  background: $white;
+  margin-top: 1.5rem;
+  border-radius: $border-radius;
+  border: 1px solid #d3d3d3;
+  box-shadow: $box_shadow;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+//Tour - Image Section
+.tour_header {
+  display: flex;
+  position: relative;
+  flex-direction: column-reverse;
+  .tour_image {
+    z-index: 1;
+    max-width: 100%;
+    min-width: 300px;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  .tour_logo {
+    position: absolute;
+    z-index: 2;
+  }
+}
+
+//Tour Body
+.tour_body {
+  padding: 5px 15px;
+  img {
+    padding-right: 3px;
+  }
+  p {
+    padding: 3px 0;
+    font-size: 0.85rem;
+    &.tour_name {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+  .rating :first-child {
+    margin-left: -2.5px;
+  }
+
+  .tour_itinerary {
+    img {
+      margin-left: 2px;
+    }
+    a {
+      cursor: pointer;
+      color: #0072ea;
+    }
+  }
+
+  .tour_dates,
+  .tour_duration,
+  .tour_itinerary {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    grid-column-gap: 5px;
+    align-items: center;
+    &.tour_itinerary {
+      align-items: start;
+      img {
+        margin-top: 3px;
+      }
+    }
+  }
+  hr {
+    border: 1px solid #efefef;
+  }
+}
+
+//Tour Footer
+.tour_footer {
+  padding: 0px 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: grey;
+
+  .tooltip {
+    position: relative;
+    &:hover .tooltip_text {
+      visibility: visible;
+    }
+    .tooltip_img:hover {
+      cursor: pointer;
+    }
+    .tooltip_text {
+      position: absolute;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: $white;
+      padding: 7px 13px;
+
+      visibility: hidden;
+      border-radius: $border-radius;
+
+      width: 200px;
+      bottom: 30px;
+      left: 50%;
+      margin-left: -40px;
+    }
+  }
+
+  .currency {
+    vertical-align: top;
+    color: black;
+  }
+  .price {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+  .tour_btn {
+    background-color: $btn_bg;
+    color: $white;
+    padding: 11px 24px;
+    border-radius: $border-radius;
+    box-shadow: $box_shadow;
+    margin: 5px 0;
+    font-size: 1rem;
+
+    &:hover {
+      background-color: $btn_hover;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
