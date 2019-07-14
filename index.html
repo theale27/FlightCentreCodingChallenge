@@ -10,45 +10,50 @@
     <script src="scripts/script.js"></script>
   </head>
   <body>
-    <section id="tour_header">
-      <p class="tour_heading">Select a Tour</p>
-      <p class="tours_found">found</p>
-    </section>
-    <section id="tour_container">
-      <div class="tour">
-        <div class="tour_header">
-          <img class="tour_image" />
-          <img class="tour_logo" width="85px" />
+    <section>
+      <section id="tour_header">
+        <p class="tour_heading">Select a Tour</p>
+        <p class="tours_found">found</p>
+      </section>
+      <section id="tour_container">
+        <div class="tour">
+          <div class="tour_header">
+            <img class="tour_image" />
+            <img class="tour_logo" width="85px" />
+          </div>
+          <div class="tour_body">
+            <p class="tour_name"></p>
+            <div class="rating"></div>
+            <p class="tour_dates">
+              <img src="/images/calendar.svg" width="12px" />
+            </p>
+            <p class="tour_duration">
+              <img src="/images/clock.svg" width="12px" />
+            </p>
+            <p class="tour_itinerary">
+              <img src="/images/pin.svg" width="9px" />
+            </p>
+            <hr />
+          </div>
+          <div class="tour_footer">
+            <p>
+              from
+              <span class="tooltip">
+                <img
+                  class="tooltip_img"
+                  src="/images/tooltip.svg"
+                  width="12px"
+                />
+                <span class="tooltip_text"
+                  >Prices are per person and in Australian Dollars.</span
+                ></span
+              ><br />
+              <span class="currency">$</span>
+              <span class="price"></span>
+            </p>
+            <a class="tour_btn">VIEW TOUR</a>
+          </div>
         </div>
-        <div class="tour_body">
-          <p class="tour_name"></p>
-          <div class="rating"></div>
-          <p class="tour_dates">
-            <img src="/images/calendar.svg" width="12px" />
-          </p>
-          <p class="tour_duration">
-            <img src="/images/clock.svg" width="12px" />
-          </p>
-          <p class="tour_itinerary">
-            <img src="/images/pin.svg" width="9px" />
-          </p>
-          <hr />
-        </div>
-        <div class="tour_footer">
-          <p>
-            from
-            <span class="tooltip">
-              <img class="tooltip_img" src="/images/tooltip.svg" width="12px" />
-              <span class="tooltip_text"
-                >Prices are per person and in Australian Dollars.</span
-              ></span
-            ><br />
-            <span class="currency">$</span>
-            <span class="price"></span>
-          </p>
-          <a class="tour_btn">VIEW TOUR</a>
-        </div>
-      </div>
-    </section>
+      </section>
   </body>
 </html>

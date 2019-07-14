@@ -32,7 +32,8 @@ body {
 // Landscape Phones and above
 @media (min-width: 576px) {
   body {
-    margin: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }
 

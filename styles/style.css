@@ -8,7 +8,7 @@ body a { text-decoration: none; }
 
 body a:hover { text-decoration: underline; }
 
-@media (min-width: 576px) { body { margin: 4rem; } }
+@media (min-width: 576px) { body { max-width: 1000px; margin: 0 auto; } }
 
 #tour_header { margin: 5px; }
 
