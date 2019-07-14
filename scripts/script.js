@@ -38,12 +38,12 @@ let fetchTours = fetch("/sample_data.json")
         if (rating > 0.5) {
           //Add 1 star
           tour.getElementsByClassName("rating")[0].innerHTML +=
-            '<img src="star.svg" width="17px" />';
+            '<img src="/images/star.svg" width="17px" />';
           rating--;
         } else if (rating === 0.5) {
           //Add 0.5 star
           tour.getElementsByClassName("rating")[0].innerHTML +=
-            '<img src="star-half.svg" width="17px" />';
+            '<img src="/images/star-half.svg" width="17px" />';
           rating = 0;
         }
       }
